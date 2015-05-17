@@ -1,0 +1,140 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:System;assembly=mscorlib" x:Class="Poker.Client.TablePoker"
+    Title="Poker Texas Hold'em en réseau" Height="768" Width="1024" WindowStartupLocation="CenterScreen" Closing="TablePoker_Closing" Closed="TablePoker_Closed" MinHeight="768" MinWidth="1024" Icon="Images\PokerEnReseau.ico" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+  <Window.Resources>
+  	<ResourceDictionary>
+  		<ResourceDictionary.MergedDictionaries>
+  			<ResourceDictionary Source="Styles\DicoResources.xaml"/>
+			<ResourceDictionary Source="Styles\DictionnaireFontes.xaml"/>
+            <ResourceDictionary Source="Styles\DictionnaireCartes.xaml"/>
+  		</ResourceDictionary.MergedDictionaries>  		
+  	</ResourceDictionary>    
+  </Window.Resources>
+  <DockPanel Width="Auto" Height="Auto" LastChildFill="True" x:Name="pnlFenetre">
+		<TabControl x:Name="tabChatAdminOptions" Width="231.2" Height="Auto" DockPanel.Dock="Right" >
+  		<TabItem Header="Partie" x:Name="tabPartie">
+  			<DockPanel LastChildFill="True">
+  				<Button DockPanel.Dock="Bottom" Click="EnvoyerChatMessage" x:Name="btnEnvoyer" Content="Envoyer" IsDefault="True"/>
+  				<TextBox DockPanel.Dock="Bottom" x:Name="txtChatMessage" Height="57.16" AcceptsReturn="False" TextWrapping="Wrap"/>
+  				<RichTextBox x:Name="rtbInfos" IsReadOnly="True" Focusable="False" VerticalScrollBarVisibility="Auto" AcceptsReturn="False"/>
+  			</DockPanel>
+  		</TabItem>
+  		<TabItem Header="Administration" x:Name="tabAdmin">
+  			<DockPanel x:Name="pnlAdmin" Width="Auto" Height="Auto">
+  				<Button Height="23" x:Name="btnDemarrer" Click="DemarrerPartie" Width="Auto" IsEnabled="False" Visibility="Visible" Content="Démarrer partie" DockPanel.Dock="Bottom"/>         
+  				<Button x:Name="btnListeIp" VerticalAlignment="Bottom" Width="Auto" Height="23" Content="Liste des adresses IP du serveur" Click="btnListeIp_Click" DockPanel.Dock="Bottom"/>         
+  				<GroupBox x:Name="grpOptions" Width="Auto" Height="349.36" Header="Options de la partie" DockPanel.Dock="Top">
+  					<Canvas Width="Auto" Height="Auto">
+  						<Label HorizontalAlignment="Left" x:Name="lblTapisInitial" VerticalAlignment="Top" Width="Auto" Height="Auto" Content="Tapis initial" Canvas.Left="8" Canvas.Top="7.44"/>
+  						<TextBox x:Name="txtTapisInitial" Width="65.6" Height="26.52" Text="" TextWrapping="Wrap" Canvas.Left="135.6" Canvas.Top="7.44" TextChanged="VerificationSaisieChiffre"/>
+  						<Label x:Name="lblPetiteBlindInitiale" Width="124.627" Height="32.8" Content="Petite blind initiale" Canvas.Left="8" Canvas.Top="37.4"/>
+  						<TextBox x:Name="txtPetiteBlindInitiale" Width="65" Height="26" Text="" TextWrapping="Wrap" Canvas.Left="135.6" Canvas.Top="37.96" TextChanged="VerificationSaisieChiffre"/>
+  						<Label x:Name="lblTimeOutAction" Width="Auto" Height="Auto" Content="Délai d'attente joueur" Canvas.Top="273.6" Canvas.Left="8"/>
+  						<TextBox x:Name="txtTimeOutAction" Width="65.6" Height="26.52" Text="" TextWrapping="Wrap" Canvas.Left="135.6" Canvas.Top="273.6" TextChanged="VerificationSaisieChiffre"/>
+  						<GroupBox x:Name="grpAugmentationBlinds" Width="193.2" Height="102.6" Canvas.Left="7.4" Canvas.Top="71.56" Header="Augmentation des blinds">
+  							<Canvas Width="Auto" Height="Auto">
+  								<Label Width="181.2" Height="29.24" Content="Description de la méthode" Canvas.Left="0" Canvas.Top="0" x:Name="lblMethodeCalcul" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+  								<Label x:Name="lblLibelleParametre" Width="110" Height="28.84" Content="Libellé paramètre" Canvas.Left="0" Canvas.Top="26"/>
+  								<TextBox x:Name="txtParametreAugmentationBlinds" Width="98.8" Height="24" Text="" TextWrapping="Wrap" Canvas.Left="6" Canvas.Top="52" TextChanged="VerificationSaisieChiffre"/>
+  							</Canvas>
+  						</GroupBox>
+  						<GroupBox Width="192.6" Height="91.44" Canvas.Left="8" Canvas.Top="178.16" Header="Délai fin donne" x:Name="grpDelaiFinDonne">
+						<Canvas>
+  						<Label Width="Auto" Height="Auto" x:Name="lblTimeOutFinDonneCartesCachees" Content="Cartes cachées" Canvas.Top="8" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.611,0.969"/>
+							<TextBox x:Name="txtTimeOutFinDonneCartesCachees" Width="65.6" Height="26.52" Text="" TextWrapping="Wrap" TextChanged="VerificationSaisieChiffre" Canvas.Left="107" Canvas.Top="8" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+							<Label Width="Auto" Height="Auto" x:Name="lblTimeOutFinDonneCartesMontrees" Content="Cartes montrées" Canvas.Left="0" Canvas.Top="38.52" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+							<TextBox x:Name="txtTimeOutFinDonneCartesMontrees" Width="65.6" Height="26.52" Text="" TextWrapping="Wrap" Canvas.Left="107" Canvas.Top="38.52" TextChanged="VerificationSaisieChiffre" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+						</Canvas>
+						</GroupBox>
+  					</Canvas>
+  				</GroupBox>
+  				<GroupBox RenderTransformOrigin="0.488,0.494" x:Name="grpBots" Width="Auto" Height="91.2" Header="Gestion des bots" DockPanel.Dock="Top" VerticalAlignment="Top">
+  					<Grid Width="Auto" Height="Auto">
+  						<ComboBox Margin="8,8,8,0" x:Name="cboListeBots" VerticalAlignment="Top" Height="21.96" IsSynchronizedWithCurrentItem="True" SelectionChanged="ChoixBot"/>
+  						<TextBox Margin="8,36.8,106.2,0" x:Name="txtNomBot" VerticalAlignment="Top" Width="95" Height="24.8" Text="" TextWrapping="Wrap" IsEnabled="False" TextChanged="SaisieNomBot"/>
+  						<Button HorizontalAlignment="Right" Margin="0,36.8,8,0" x:Name="btnAJouterBot" VerticalAlignment="Top" Width="76.6" Height="24.8" Content="Ajouter Bot" IsEnabled="False" Click="AjouterBot"/>
+  					</Grid>
+  				</GroupBox>
+  				<GroupBox x:Name="grpListeJoueurs" Width="Auto" Height="Auto" Header="Liste des connectés"/>
+  			</DockPanel>
+         
+  		</TabItem>
+  		<TabItem Header="Options" x:Name="tabOptions" FontWeight="Normal">
+
+  			<DockPanel x:Name="pnlOptions" Width="Auto" Height="Auto" LastChildFill="False">
+  				<GroupBox x:Name="grpOptionsJeu" Width="Auto" Height="203.76" DockPanel.Dock="Top" Header="Jeu">
+  					<CheckBox Width="Auto" Height="Auto" Content="Cacher les cartes" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="chkCacherCartes" Margin="3,3,0,0" Click="chkCacherCartes_Click" IsChecked="False"/>
+  				</GroupBox>
+  			</DockPanel>
+
+  		</TabItem>
+        
+  	</TabControl>
+        <Grid Width="Auto" Height="70" DockPanel.Dock="Bottom" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="grdActions" >
+            <Grid x:Name="pnlAction" d:IsLayer="True" IsEnabled="False" d:IsHidden="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="20px"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130px"/>
+                    <ColumnDefinition Width="130px"/>
+                    <ColumnDefinition Width="130px"/>
+                    <ColumnDefinition Width="80px"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50px"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Jeter" Margin="20,11,10,12" x:Name="btnJeter" Height="26" Click="btnJeter_Click"/>
+                <Button Margin="10,11,10,12" Content="Suivre" Grid.Column="1" Grid.RowSpan="1" x:Name="btnSuivre" Height="26" Click="btnSuivre_Click"/>
+                <Button Content="Relancer" Margin="10,11,10,12" Grid.Column="2" x:Name="btnMiserOuRelancer" Height="26" Click="btnMiserOuRelancer_Click"/>
+                <TextBox HorizontalAlignment="Stretch" Margin="10,11,10,12" Width="Auto" Grid.Column="3" Text="{Binding Path=Value, ElementName=sldMise, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" x:Name="txtMise" d:LayoutOverrides="GridBox" VerticalAlignment="Stretch" TextChanged="VerificationSaisieChiffre" Height="26"/>
+                <Slider HorizontalAlignment="Stretch" Margin="10,11,20,12" Width="Auto" Grid.RowSpan="1" Grid.Column="4" x:Name="sldMise" TickPlacement="BottomRight" Value="-64" VerticalAlignment="Stretch" LargeChange="5" Maximum="10" SmallChange="1" TickFrequency="5" ValueChanged="sldMise_ValueChanged"/>
+                <Button Content="Tapis" Margin="-5,11.5,20,12.5" Grid.Column="5" x:Name="btnMiserTapis" Height="26" Click="btnMiserTapis_Click" d:LayoutOverrides="GridBox"/>
+                <ProgressBar Margin="20,0,20,8" Height="12" Background="Green" Foreground="Red" VerticalAlignment="Stretch" Grid.Row="1" x:Name="timer" HorizontalAlignment="Stretch" Grid.ColumnSpan="6" Grid.RowSpan="1" Value="100"/>
+            </Grid>
+            <Grid x:Name="pnlReplay" d:IsLayer="True">
+            	<Grid.RowDefinitions>                    
+                    <RowDefinition Height="28.4"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            	<Slider HorizontalAlignment="Stretch" Margin="120,0,20,0" Width="Auto" Maximum="100" TickPlacement="BottomRight" x:Name="sldNumDonne" Value="50" SmallChange="1" LargeChange="1" ValueChanged="sldNumDonne_ValueChanged"/>
+            	<Label HorizontalAlignment="Left" Margin="8,8,0,0" Width="61.2" VerticalAlignment="Stretch" Padding="0,0,0,0" Content="Donne n°:" x:Name="lblNumDonneReplay"/>
+            	<Label Padding="0,0,0,0" Width="29.2" HorizontalAlignment="Left" Margin="69.2,8,0,4.44" Content="{Binding Path=Value, ElementName=sldNumDonne, Mode=Default}" x:Name="lblNumDonne" d:LayoutOverrides="Height"/>
+            	<Button HorizontalAlignment="Left" Margin="8,10.8,0,6.8" Width="114" Content="Play" Grid.Row="1" x:Name="btnPlay" Click="btnPlay_Click"/>
+                <Button HorizontalAlignment="Left" Margin="8,10.8,0,6.8" Width="114" Content="Pause" Grid.Row="1" x:Name="btnPause" Click="btnPause_Click"/>
+            	<Label Margin="314.8,10.8,354,6.8" Content="Méthode lecture" Grid.Row="1" Padding="0,0,0,0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Height="24" x:Name="lblMethodeLecture"/>
+            	<ComboBox IsSynchronizedWithCurrentItem="True" Margin="0,10.8,152.4,6.8" Grid.Row="1" Width="197.6" HorizontalAlignment="Right" x:Name="cboLecturePartie"/>
+            	<Button HorizontalAlignment="Right" Margin="0,10.8,20,6.8" Width="117.6" Content="Choisir une partie ..." Grid.Row="1" x:Name="btnChoisirPartie" Click="btnChoisirPartie_Click"/>
+            	<Label HorizontalAlignment="Left" Margin="87.913,8,0,4.44" Width="Auto" Content="/" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            	<Label HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="lblNbDonnes" Margin="98.4,8,0,0" Padding="0,0,0,0" Content="{Binding Path=Maximum, ElementName=sldNumDonne, Mode=Default}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>                
+            </Grid>
+        </Grid>
+        <Grid Width="Auto" Height="Auto" x:Name="grdTableJeu" DockPanel.Dock="Top" Background="#FF05662A">
+			<Grid d:IsLayer="True" HorizontalAlignment="Stretch" Margin="0,0,0,0" x:Name="Layer" VerticalAlignment="Stretch">
+				<Border HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="Auto" Height="Auto" CornerRadius="6,6,6,6" Background="#FF0A852C" BorderThickness="4,4,4,4" BorderBrush="#FFCEB51B" Padding="10,10,10,10">
+					<Grid x:Name="grdBoard" Width="Auto" Height="Auto">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="80px"/>
+							<ColumnDefinition Width="80px"/>
+							<ColumnDefinition Width="80px"/>
+							<ColumnDefinition Width="80px"/>
+							<ColumnDefinition Width="80px"/> 					
+						</Grid.ColumnDefinitions>
+						<Image x:Name="imgCarte1" Style="{DynamicResource CarteStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="1" Stretch="Fill" Margin="3,0,0,0" />						
+						<Image x:Name="imgCarte2" Style="{DynamicResource CarteStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="1" Stretch="Fill" Margin="3,0,0,0" />					
+						<Image x:Name="imgCarte3" Style="{DynamicResource CarteStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Grid.ColumnSpan="1" Stretch="Fill" Margin="3,0,0,0" />
+						<Image x:Name="imgCarte4" Style="{DynamicResource CarteStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="3" Grid.ColumnSpan="1" Stretch="Fill" Margin="3,0,0,0" />
+						<Image x:Name="imgCarte5" Style="{DynamicResource CarteStyle}"  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" Grid.ColumnSpan="1" Stretch="Fill" Margin="3,0,0,0"  />
+					</Grid>
+				</Border>
+				<Label HorizontalAlignment="Center" VerticalAlignment="Center" Content="Pot : 9999" x:Name="lblPot" Style="{DynamicResource fontePot}" Margin="0,170,0,0"/>
+				<Label HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="Auto" Height="Auto" Content="Blind : 1000 / 1000" Style="{DynamicResource fonteInfosBlind}" x:Name="lblMontantBlind"/>
+				<Label HorizontalAlignment="Right" Margin="0,0,0,30" VerticalAlignment="Bottom" Width="183" Height="Auto" Content="Prochaines blinds :" Style="{DynamicResource fonteInfosBlind}" x:Name="lblProchainesBlinds" HorizontalContentAlignment="Left" Padding="5,5,5,5"/>
+				<Label HorizontalAlignment="Right" Margin="0,0,120,0" Style="{DynamicResource fonteInfosBlind}" VerticalAlignment="Bottom" Width="Auto" Height="Auto" Content="05:00 " x:Name="lblTempsBlinds"/>
+				<Label HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="Auto" Height="Auto" Content="1000/1000" Style="{DynamicResource fonteInfosBlind}" Cursor="None" x:Name="lblMontantProchainesBlinds"/>				
+			</Grid>
+		</Grid>
+	</DockPanel>
+</Window>

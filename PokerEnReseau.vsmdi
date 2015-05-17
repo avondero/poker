@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestLists xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestList name="Lists of Tests" id="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <RunConfiguration id="3f40f768-6cbc-43fb-b668-f7ae17c5e51d" name="Local Test Run" storage="localtestrun.testrunconfig" type="Microsoft.VisualStudio.TestTools.Common.TestRunConfiguration, Microsoft.VisualStudio.QualityTools.Common,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestList>
+  <TestList name="JeuPoker" id="9e665858-0983-4e62-b839-f87b543c279f" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <Description>Test du tirage des cartes
+
+</Description>
+    <TestLinks>
+      <TestLink id="63fc316a-f613-83cc-cdb6-96a798157632" name="TirerUneCarteAuHasardTest" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="MainPoker" id="bc6c10a2-09a5-4554-97ed-ad3d45632c6f" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <Description>Liste des tests relatifs à la classe MainPoker
+</Description>
+    <TestLinks>
+      <TestLink id="d2dcd988-72b0-545e-2055-3f2244b7b975" name="EqualsTest5" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="765859e7-67b5-23fb-561b-06d775a25a83" name="ConstructorTest2" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="f42460e3-8701-e022-7933-fca1fdfde0e4" name="EqualsTest1" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="9f7bbd79-bd9f-ccbd-9636-c09e2dcda297" name="EqualsTest2" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="016cbd09-cad4-d560-b9c6-4dba29ccb6e7" name="EqualsTest4" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="99e312e8-d2df-9917-9a4a-b1c700ecefc0" name="CompareToTest" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="083dd26b-e9a9-a753-f49d-5929ba2cb732" name="ConstructorTest3" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="75fb8281-86f6-2a10-7b48-8bf54f0e247f" name="EqualsTest7" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="56347c3d-b9c7-5bbf-c249-986efa79c5ed" name="ConstructorTest1" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="60c2602e-f402-ab9e-a59a-47475c64b40a" name="EqualsTest6" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="5213666f-a51a-8bcc-6f2b-545624da5067" name="EqualsTest3" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="Combinaisons" id="e955230d-50f4-4dfd-8c6e-8ba5c4fede12" parentListId="bc6c10a2-09a5-4554-97ed-ad3d45632c6f">
+    <Description>Tests de détermination de combinaisons</Description>
+    <TestLinks>
+      <TestLink id="52640ab1-c4e1-e9a5-bb9c-7f420f76bcf6" name="DeterminerCombinaisonTestQuinte1" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="9cb439ea-a8c8-2943-6d28-df23627baeb3" name="DeterminerCombinaisonTestQuinteFlush1" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="d62dae4c-3542-d66b-ce2a-35cba1adcb8e" name="DeterminerCombinaisonTestFull3" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="3d6fef0a-776a-e83f-28e4-57c415a462cf" name="DeterminerCombinaisonTestFull1" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="b5ef787e-c5ee-9df4-5528-565f2920e0aa" name="DeterminerCombinaisonTestCouleur1" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="ae9fe180-f063-4ac4-8aac-b6eda785f366" name="DeterminerCombinaisonTestFull5" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="e8f9289f-8692-1c06-c52a-d4e502428f93" name="DeterminerCombinaisonTestDoublePaire2" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="a361c4c0-15da-489b-66e6-11e897996102" name="DeterminerCombinaisonTestCarteSimple1" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="7579fd92-c978-c794-1cef-936a2552e002" name="DeterminerCombinaisonTestCarre1" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="a586506f-ad50-b864-57b3-830831181cfb" name="DeterminerCombinaisonTestPaire1" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="05c5ffe6-4d42-91e9-c00d-0c3f7569df9e" name="DeterminerCombinaisonTestDoublePaire1" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="69a8db37-74f7-7c1c-a7bc-ad59ffc07ac1" name="DeterminerCombinaisonTestFull2" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="55fab601-02fc-e6d0-1ee0-4be849911f10" name="DeterminerCombinaisonTestBrelan1" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="0a94d833-2fc7-e672-774e-644daf4090e5" name="DeterminerCombinaisonTestQuinteFlush2" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="8911f0ca-db15-5983-8018-c95c8f908896" name="DeterminerCombinaisonTestCouleur3" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="4615cd7b-ae67-088f-43fe-91d06ba3486b" name="DeterminerCombinaisonTestCouleur2" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="24a399a4-6eea-c13b-a5cb-039141cd0d79" name="DeterminerCombinaisonTestFull4" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="b9b12044-a609-c830-ecf1-4408bb2533f2" name="DeterminerCombinaisonTestQuinte2" storage="poker.testserveur\bin\debug\poker.testserveur.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+</TestLists>

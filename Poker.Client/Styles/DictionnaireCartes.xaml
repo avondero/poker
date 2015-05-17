@@ -1,0 +1,63 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="CarteStyle" TargetType="{x:Type Image}">
+        <Setter Property="Height" Value="98"/>
+        <Setter Property="Width" Value="73"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="RenderTransformOrigin" Value="0.5,0.5" />
+    </Style>
+    <Style x:Key="JoueurActif" TargetType="Canvas">
+        <Setter Property="BitmapEffect">
+            <Setter.Value>
+                <OuterGlowBitmapEffect GlowColor="#FFDFDDD1" GlowSize="15"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+        <Setter Property="RenderTransform">
+        	<Setter.Value>
+        		<TransformGroup>
+        			<ScaleTransform ScaleX="1.15" ScaleY="1.15"/>
+        			<SkewTransform AngleX="0" AngleY="0"/>
+        			<RotateTransform Angle="0"/>
+        			<TranslateTransform X="0" Y="0"/>
+        		</TransformGroup>
+        	</Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="JoueurInactif" TargetType="Canvas">
+        <Setter Property="BitmapEffect">
+            <Setter.Value>
+                <OuterGlowBitmapEffect GlowColor="#FFDFDDD1" GlowSize="0"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="CarteDesactivee" TargetType="{x:Type Image}" BasedOn="{StaticResource CarteStyle}">
+        <Setter Property="Opacity" Value="0.3"/>
+        <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+        <Setter Property="RenderTransform">
+        	<Setter.Value>
+        		<TransformGroup>
+        			<ScaleTransform ScaleX="1" ScaleY="1"/>
+        			<SkewTransform AngleX="0" AngleY="0"/>
+        			<RotateTransform Angle="0"/>
+        			<TranslateTransform X="0" Y="0"/>
+        		</TransformGroup>
+        	</Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="CarteActivee" TargetType="{x:Type Image}" BasedOn="{StaticResource CarteStyle}">
+        <Setter Property="Opacity" Value="1"/>
+        <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+        <Setter Property="RenderTransform">
+        	<Setter.Value>
+        		<TransformGroup>
+        			<ScaleTransform ScaleX="1" ScaleY="1"/>
+        			<SkewTransform AngleX="0" AngleY="0"/>
+        			<RotateTransform Angle="0"/>
+        			<TranslateTransform X="0" Y="-30"/>
+        		</TransformGroup>
+        	</Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

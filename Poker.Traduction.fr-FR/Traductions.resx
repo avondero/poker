@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Acces" xml:space="preserve">
+    <value>Accès</value>
+    <comment>Ecran de demarrage</comment>
+  </data>
+  <data name="ActionJette" xml:space="preserve">
+    <value>{0} jette ses cartes</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="ActionParole" xml:space="preserve">
+    <value>{0} check</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="ActionRelance" xml:space="preserve">
+    <value>{0} suit et relance à {1}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="ActionSuit" xml:space="preserve">
+    <value>{0} suit</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="ActionTapis" xml:space="preserve">
+    <value>{0} lance son tapis ({1}) !!!!</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Administration</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="AjoutBot" xml:space="preserve">
+    <value>Ajouter Bot</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="AugmentationBlinds" xml:space="preserve">
+    <value>Augmentation des blinds</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="BoutonListeIPServeur" xml:space="preserve">
+    <value>Liste des adresses IP du serveur</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="Classement1" xml:space="preserve">
+    <value>Vainqueur : {0}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Classement10" xml:space="preserve">
+    <value>10ème : {0}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Classement2" xml:space="preserve">
+    <value>2ème : {0}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Classement3" xml:space="preserve">
+    <value>3ème : {0}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Classement4" xml:space="preserve">
+    <value>4ème : {0}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Classement5" xml:space="preserve">
+    <value>5ème : {0}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Classement6" xml:space="preserve">
+    <value>6ème : {0}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Classement7" xml:space="preserve">
+    <value>7ème : {0}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Classement8" xml:space="preserve">
+    <value>8ème : {0}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Classement9" xml:space="preserve">
+    <value>9ème : {0}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="ConnexionTitre" xml:space="preserve">
+    <value>Connexion...</value>
+    <comment>Ecran de demarrage</comment>
+  </data>
+  <data name="DemarragePartie" xml:space="preserve">
+    <value>Démarrage d'une nouvelle partie</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Demarrer" xml:space="preserve">
+    <value>Démarrer</value>
+    <comment>Ecran de demarrage</comment>
+  </data>
+  <data name="DemarrerPartie" xml:space="preserve">
+    <value>Démarrer partie</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="Envoyer" xml:space="preserve">
+    <value>Envoyer</value>
+    <comment>Onglet Partie</comment>
+  </data>
+  <data name="ErreurSaisie" xml:space="preserve">
+    <value>Erreur de saisie : le montant doit être un entier positif</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="Flop" xml:space="preserve">
+    <value>Flop</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="GestionBots" xml:space="preserve">
+    <value>Gestion des bots</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="Heberger" xml:space="preserve">
+    <value>Héberger</value>
+    <comment>Ecran de demarrage</comment>
+  </data>
+  <data name="InfosAugmentationBlinds" xml:space="preserve">
+    <value>Augmentation des blinds</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="InfosJoueurEmpochePot" xml:space="preserve">
+    <value>{0} empoche le pot de {1}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="InfosJoueurEmpochePotAvecCombinaison" xml:space="preserve">
+    <value>{0} empoche le pot de {1} avec {2}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="InfosJoueursEmpochentPotAvecCombinaison" xml:space="preserve">
+    <value>{0} se partagent le pot de {1} avec {2}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Jeter" xml:space="preserve">
+    <value>Jeter</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="Jeu" xml:space="preserve">
+    <value>Jeu</value>
+    <comment>Onglet Options</comment>
+  </data>
+  <data name="JoueurDit" xml:space="preserve">
+    <value>{0} dit : </value>
+    <comment>Onglet Partie</comment>
+  </data>
+  <data name="Langue" xml:space="preserve">
+    <value>Langue</value>
+    <comment>Ecran de demarrage</comment>
+  </data>
+  <data name="ListeConnectes" xml:space="preserve">
+    <value>Liste des connectés</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="ListeIPServeur" xml:space="preserve">
+    <value>Liste des adresses IP de ce serveur :</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="MiseJoueur" xml:space="preserve">
+    <value>Mise = {0}</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="MontantRelance" xml:space="preserve">
+    <value>Le montant doit être compris entre {0} et {1}</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="NombreDonnes" xml:space="preserve">
+    <value>Nombre donnes</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="NomJoueur" xml:space="preserve">
+    <value>Nom du joueur</value>
+    <comment>Ecran de demarrage</comment>
+  </data>
+  <data name="non" xml:space="preserve">
+    <value>non</value>
+    <comment>Divers</comment>
+  </data>
+  <data name="NouvelleDonne" xml:space="preserve">
+    <value>Nouvelle donne</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="OptionsPartie" xml:space="preserve">
+    <value>Options de la partie</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="oui" xml:space="preserve">
+    <value>oui</value>
+    <comment>Divers</comment>
+  </data>
+  <data name="Parole" xml:space="preserve">
+    <value>Parole</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="Partie" xml:space="preserve">
+    <value>Partie</value>
+    <comment>Onglet Partie</comment>
+  </data>
+  <data name="PartieEnCours" xml:space="preserve">
+    <value>Une partie est actuellement en cours. Si vous quittez le jeu, vous allez arrêter cette partie. {\r}{\n}Voulez-vous continuer ?</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="PayeGrosseBlind" xml:space="preserve">
+    <value>{0} paye la grosse blind de {1}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="PayePetiteBlind" xml:space="preserve">
+    <value>{0} paye la petite blind de {1}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="PetiteBlindInitiale" xml:space="preserve">
+    <value>Petite blind initiale</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="Pot" xml:space="preserve">
+    <value>Pot : {0}</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="Rejoindre" xml:space="preserve">
+    <value>Rejoindre</value>
+    <comment>Ecran de demarrage</comment>
+  </data>
+  <data name="Relancer" xml:space="preserve">
+    <value>Relancer</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="River" xml:space="preserve">
+    <value>River</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Suivre" xml:space="preserve">
+    <value>Suivre (+{0})</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="Tapis" xml:space="preserve">
+    <value>Tapis</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="TapisInitial" xml:space="preserve">
+    <value>Tapis initial</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="TapisJoueur" xml:space="preserve">
+    <value>Tapis = {0}</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="Temps" xml:space="preserve">
+    <value>Temps</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="TimeOutDonne" xml:space="preserve">
+    <value>Délai fin donne</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="TimeOutJoueur" xml:space="preserve">
+    <value>Délai d'attente joueur</value>
+    <comment>Onglet Administration</comment>
+  </data>
+  <data name="TitreClient" xml:space="preserve">
+    <value>WPF Poker Texas Hold'em</value>
+    <comment>Ecran principal</comment>
+  </data>
+  <data name="Turn" xml:space="preserve">
+    <value>Turn</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Quitter" xml:space="preserve">
+    <value>Quitter</value>
+    <comment>Ecran de demarrage</comment>
+  </data>
+  <data name="JeterOuParole" xml:space="preserve">
+    <value>Vous avez choisi de jeter vos cartes mais vous pouviez faire parole. Choisissez :{\r}{\n}{\t}Oui : pour jeter vos cartes{\r}{\n}{\t}Non : pour faire parole{\r}{\n}{\t}Annuler : pour annuler votre choix</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="ActionMise" xml:space="preserve">
+    <value>{0} mise {1}</value>
+    <comment>MessageInformation</comment>
+  </data>
+  <data name="Miser" xml:space="preserve">
+    <value>Miser</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="CacherLesCartes" xml:space="preserve">
+    <value>Cacher les cartes</value>
+    <comment>Onglet Options</comment>
+  </data>
+  <data name="PokerPanelGrosseBlind" xml:space="preserve">
+    <value>Gr. blind : {0}</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="PokerPanelMise" xml:space="preserve">
+    <value>Mise : {0}</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="PokerPanelParole" xml:space="preserve">
+    <value>Parole</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="PokerPanelPasse" xml:space="preserve">
+    <value>Passe</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="PokerPanelPetiteBlind" xml:space="preserve">
+    <value>Pe. blind : {0}</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="PokerPanelRelance" xml:space="preserve">
+    <value>Relance : {0}</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="PokerPanelSuit" xml:space="preserve">
+    <value>Suit : {0}</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="PokerPanelTapis" xml:space="preserve">
+    <value>Tapis : {0}</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="MontantBlind" xml:space="preserve">
+    <value>Blind : {0} / {1}</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="DelaiProchaineBlind" xml:space="preserve">
+    <value>{0:00}:{1:00}</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="MontantProchaineBlind" xml:space="preserve">
+    <value>{0} / {1}</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="ProchainesBlinds" xml:space="preserve">
+    <value>Prochaines blinds :</value>
+    <comment>Jeu</comment>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Options</value>
+    <comment>Onglet Options</comment>
+  </data>
+  <data name="ChoisirPartie" xml:space="preserve">
+    <value>Choisir une partie ...</value>
+    <comment>Replay</comment>
+  </data>
+  <data name="DemarrerLecture" xml:space="preserve">
+    <value>Démarrer lecture</value>
+    <comment>SelectionParties</comment>
+  </data>
+  <data name="DescriptionPartie" xml:space="preserve">
+    <value>Description</value>
+    <comment>SelectionParties</comment>
+  </data>
+  <data name="MethodeLecture" xml:space="preserve">
+    <value>Méthode lecture</value>
+    <comment>Replay</comment>
+  </data>
+  <data name="NomPartie" xml:space="preserve">
+    <value>Nom</value>
+    <comment>SelectionParties</comment>
+  </data>
+  <data name="NumeroDonneReplay" xml:space="preserve">
+    <value>Donne n°</value>
+    <comment>Replay</comment>
+  </data>
+  <data name="Replay" xml:space="preserve">
+    <value>Rejouer</value>
+    <comment>Ecran de demarrage</comment>
+  </data>
+  <data name="SelectionParties" xml:space="preserve">
+    <value>Sélection d'une partie</value>
+    <comment>SelectionParties</comment>
+  </data>
+  <data name="ErreurChangementDonne" xml:space="preserve">
+    <value>Erreur lors du changement de donne : </value>
+    <comment>Message Erreur</comment>
+  </data>
+  <data name="ErreurChoixPartie" xml:space="preserve">
+    <value>Erreur lors du choix d'une partie :</value>
+    <comment>Message Erreur</comment>
+  </data>
+  <data name="ErreurConnection" xml:space="preserve">
+    <value>Erreur lors de la connection : Problème de communication avec le serveur</value>
+    <comment>Message Erreur</comment>
+  </data>
+  <data name="ErreurConnectionNomDejaUtilise" xml:space="preserve">
+    <value>Erreur lors de la connection : ce nom est déjà utilisé</value>
+    <comment>Message Erreur</comment>
+  </data>
+  <data name="ErreurConnectionNomIncorrect" xml:space="preserve">
+    <value>Erreur lors de la connection : ce nom est incorrect</value>
+    <comment>Message Erreur</comment>
+  </data>
+  <data name="ErreurConnectionPartieEnCours" xml:space="preserve">
+    <value>Erreur lors de la connection : Une partie est en cours</value>
+    <comment>Message Erreur</comment>
+  </data>
+  <data name="ErreurConnectionTropDeJoueurs" xml:space="preserve">
+    <value>Erreur lors de la connection : Trop de joueurs sont déjà connectés</value>
+    <comment>Message Erreur</comment>
+  </data>
+  <data name="ErreurApplication" xml:space="preserve">
+    <value>Erreur fatale de l'application :</value>
+    <comment>Ecran de demarrage</comment>
+  </data>
+  <data name="ErreurDemarrageServeur" xml:space="preserve">
+    <value>Erreur lors du démarrage du serveur d'hébergement :</value>
+    <comment>Ecran de demarrage</comment>
+  </data>
+  <data name="EnSpectateur" xml:space="preserve">
+    <value>En tant que spectateur</value>
+    <comment>Ecran de demarrage</comment>
+  </data>
+</root>
