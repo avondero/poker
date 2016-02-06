@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Runtime.Serialization;
+using System.Diagnostics;
+using Poker.Interface.Outils;
 
 namespace Poker.Interface.Metier
 {
@@ -9,6 +11,9 @@ namespace Poker.Interface.Metier
     /// Une carte du jeu de poker
     /// </summary>
     [DataContract()]
+    [DebuggerDisplay("{Hauteur} de {Couleur}")]
+    [DebuggerVisualizer(typeof(CartePokerVisualizer))]
+    [Serializable]
     public class CartePoker : IComparable<CartePoker>
     {
         #region Membres privés
@@ -18,11 +23,6 @@ namespace Poker.Interface.Metier
 
         #region Constructeurs
         /// <summary>
-        /// Constructeur privé : on ne créé jamais une carte vide
-        /// </summary>
-        private CartePoker() { }
-
-        /// <summary>
         /// Unique constructeur d'une carte
         /// </summary>
         /// <param name="hauteur"></param>
@@ -31,6 +31,7 @@ namespace Poker.Interface.Metier
         {
             _hauteur = hauteur;
             _couleur = couleur;
+            
         }
         #endregion
 
