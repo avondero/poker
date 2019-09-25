@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProductVersion>9.0.21022</ProductVersion>
     <ProjectGuid>{224E45FD-5264-4843-8C8A-AC0C21379326}</ProjectGuid>
@@ -32,24 +32,25 @@
     <Deterministic>false</Deterministic>
     <AssemblyVersion>4.3.*</AssemblyVersion>
     <FileVersion>4.3.0.0</FileVersion>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
-    <PreBuildEvent>if not exist "$(SolutionDir)PokerEnReseau\$(OutDir)\bots" mkdir "$(SolutionDir)PokerEnReseau\$(OutDir)\bots"</PreBuildEvent>
+    <OutputPath>bin\netstandard2.0\Debug\</OutputPath>
+    <!--<PreBuildEvent>if not exist "$(SolutionDir)PokerEnReseau\$(OutDir)\bots" mkdir "$(SolutionDir)PokerEnReseau\$(OutDir)\bots"</PreBuildEvent>
     <PostBuildEvent>copy /Y "$(TargetDir)\$(TargetName).*" "$(SolutionDir)PokerEnReseau\$(OutDir)\bots\"</PostBuildEvent>
     <PreBuildEvent>if not exist "$(SolutionDir)PokerEnReseau\$(OutDir)\bots" mkdir "$(SolutionDir)PokerEnReseau\$(OutDir)\bots"</PreBuildEvent>
     <PostBuildEvent>copy /Y "$(TargetDir)\$(TargetName).*" "$(SolutionDir)PokerEnReseau\$(OutDir)\bots\"</PostBuildEvent>
     <PreBuildEvent>if not exist "$(SolutionDir)PokerEnReseau\$(OutDir)\bots" mkdir "$(SolutionDir)PokerEnReseau\$(OutDir)\bots"</PreBuildEvent>
-    <PostBuildEvent>copy /Y "$(TargetDir)\$(TargetName).*" "$(SolutionDir)PokerEnReseau\$(OutDir)\bots\"</PostBuildEvent>
+    <PostBuildEvent>copy /Y "$(TargetDir)\$(TargetName).*" "$(SolutionDir)PokerEnReseau\$(OutDir)\bots\"</PostBuildEvent>-->
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
+    <DocumentationFile></DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
   </PropertyGroup>
-  <PropertyGroup>
+  <!--<PropertyGroup>
     <PreBuildEvent>if not exist "$(SolutionDir)PokerEnReseau\$(OutDir)\bots" mkdir "$(SolutionDir)PokerEnReseau\$(OutDir)\bots"</PreBuildEvent>
     <PostBuildEvent>copy /Y "$(TargetDir)\$(TargetName).*" "$(SolutionDir)PokerEnReseau\$(OutDir)\bots\"</PostBuildEvent>
-  </PropertyGroup>
+  </PropertyGroup>-->
   <ItemGroup>
     <ProjectReference Include="..\Poker.Interface\Poker.Interface.csproj" />
   </ItemGroup>
