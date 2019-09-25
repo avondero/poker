@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <ProductVersion>9.0.21022</ProductVersion>
     <ProjectGuid>{D609A6D1-1AEA-429F-AA82-84E4EE6FB6B8}</ProjectGuid>
@@ -44,7 +44,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Outils\CartePokerVisualizer.cs" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.0.0" />
   </ItemGroup>
 </Project>

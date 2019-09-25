@@ -16,7 +16,7 @@ namespace Poker.Interface.Metier
     [Serializable]
     public class CartePoker : IComparable<CartePoker>
     {
-        #region Membres privï¿½s
+        #region Membres privés
         private HauteurCarte _hauteur;
         private CouleurCarte _couleur;
         #endregion
@@ -35,7 +35,7 @@ namespace Poker.Interface.Metier
         }
         #endregion
 
-        #region Propriï¿½tï¿½s publiques
+        #region Propriétés publiques
         /// <summary>
         /// Hauteur d'une carte
         /// </summary>
@@ -56,7 +56,7 @@ namespace Poker.Interface.Metier
         }
         #endregion
 
-        #region Methodes surchargï¿½es
+        #region Methodes surchargées
         public override bool Equals(object obj)
         {
             CartePoker carteAComparee = (CartePoker)obj;
@@ -74,7 +74,7 @@ namespace Poker.Interface.Metier
         }
         #endregion
 
-        #region Implï¿½mentation de IComparable
+        #region Implémentation de IComparable
         /// <summary>
         /// Comparaison de 2 cartes de Poker
         /// </summary>
