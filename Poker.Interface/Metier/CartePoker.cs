@@ -12,11 +12,11 @@ namespace Poker.Interface.Metier
     /// </summary>
     [DataContract()]
     [DebuggerDisplay("{Hauteur} de {Couleur}")]
-    [DebuggerVisualizer(typeof(CartePokerVisualizer))]
+   // [DebuggerVisualizer(typeof(CartePokerVisualizer))]
     [Serializable]
     public class CartePoker : IComparable<CartePoker>
     {
-        #region Membres privés
+        #region Membres privï¿½s
         private HauteurCarte _hauteur;
         private CouleurCarte _couleur;
         #endregion
@@ -35,7 +35,7 @@ namespace Poker.Interface.Metier
         }
         #endregion
 
-        #region Propriétés publiques
+        #region Propriï¿½tï¿½s publiques
         /// <summary>
         /// Hauteur d'une carte
         /// </summary>
@@ -56,7 +56,7 @@ namespace Poker.Interface.Metier
         }
         #endregion
 
-        #region Methodes surchargées
+        #region Methodes surchargï¿½es
         public override bool Equals(object obj)
         {
             CartePoker carteAComparee = (CartePoker)obj;
@@ -74,7 +74,7 @@ namespace Poker.Interface.Metier
         }
         #endregion
 
-        #region Implémentation de IComparable
+        #region Implï¿½mentation de IComparable
         /// <summary>
         /// Comparaison de 2 cartes de Poker
         /// </summary>
