@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProductVersion>9.0.21022</ProductVersion>
     <ProjectGuid>{224E45FD-5264-4843-8C8A-AC0C21379326}</ProjectGuid>
@@ -8,7 +8,7 @@
     <SccAuxPath>https://tfs.codeplex.com/tfs/tfs04</SccAuxPath>
     <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
     <UpgradeBackupLocation />
-    <TargetFramework>net46</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <PublishUrl>publier\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
