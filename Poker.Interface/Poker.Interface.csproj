@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProductVersion>9.0.21022</ProductVersion>
     <ProjectGuid>{D609A6D1-1AEA-429F-AA82-84E4EE6FB6B8}</ProjectGuid>
@@ -9,7 +9,7 @@
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFramework>net46</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
