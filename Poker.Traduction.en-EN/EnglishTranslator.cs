@@ -4,13 +4,11 @@ using System.Text;
 using Poker.Interface.ExtensionsClient.Traduction;
 using System.Resources;
 using Poker.Interface.Metier;
-using System.Speech.Synthesis;
 
 namespace Poker.Traduction.English
 {
     public class EnglishTranslator : ITraducteur
     {
-        private SpeechSynthesizer _speechSynthesizer = new SpeechSynthesizer();
 
         #region ITraducteur Membres
 
@@ -120,23 +118,6 @@ namespace Poker.Traduction.English
             return CardName(carte, true, false) + " of " + ColorName(carte);
         }
 
-        /// <summary>
-        /// LEcture vocale d'une carte
-        /// </summary>
-        /// <param name="carte"></param>
-        public void LireCarte(Poker.Interface.Metier.CartePoker carte)
-        {            
-            _speechSynthesizer.Speak(CardName(carte, false, false) + " of " + ColorName(carte));
-        }
-
-        /// <summary>
-        /// Lecture d'un message
-        /// </summary>
-        /// <param name="message"></param>
-        public void LireMessage(string message)
-        {
-            _speechSynthesizer.Speak(message);
-        }
         #endregion
 
         #region Methodes  privées

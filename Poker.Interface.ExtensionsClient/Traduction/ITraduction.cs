@@ -45,19 +45,6 @@ namespace Poker.Interface.ExtensionsClient.Traduction
         /// <returns></returns>
         string TraduireCarte(Poker.Interface.Metier.CartePoker carte);
 
-        /// <summary>
-        /// Lecture vocale d'une carte
-        /// </summary>
-        /// <remarks>Non implémenté pour l'instant</remarks>
-        /// <param name="carte"></param>
-        void LireCarte(Poker.Interface.Metier.CartePoker carte);
-
-        /// <summary>
-        /// Lecture d'un message
-        /// </summary>
-        /// <remarks>Non implémenté pour l'instant</remarks>
-        /// <param name="message"></param>
-        void LireMessage(string message);
 
     }
 }

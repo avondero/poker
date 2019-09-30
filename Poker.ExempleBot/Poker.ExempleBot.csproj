@@ -1,14 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProductVersion>9.0.21022</ProductVersion>
-    <ProjectGuid>{224E45FD-5264-4843-8C8A-AC0C21379326}</ProjectGuid>
     <FileUpgradeFlags />
     <SccProjectName>%24/pokerenreseau/Poker.ExempleBot</SccProjectName>
     <SccLocalPath>.</SccLocalPath>
     <SccAuxPath>https://tfs.codeplex.com/tfs/tfs04</SccAuxPath>
     <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
     <UpgradeBackupLocation />
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <PublishUrl>publier\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -32,7 +31,7 @@
     <Deterministic>false</Deterministic>
     <AssemblyVersion>4.3.*</AssemblyVersion>
     <FileVersion>4.3.0.0</FileVersion>
-    <OutputPath>bin\netstandard2.0\Debug\</OutputPath>
+    <OutputPath>bin\netstandard2.1\Debug\</OutputPath>
     <!--<PreBuildEvent>if not exist "$(SolutionDir)PokerEnReseau\$(OutDir)\bots" mkdir "$(SolutionDir)PokerEnReseau\$(OutDir)\bots"</PreBuildEvent>
     <PostBuildEvent>copy /Y "$(TargetDir)\$(TargetName).*" "$(SolutionDir)PokerEnReseau\$(OutDir)\bots\"</PostBuildEvent>
     <PreBuildEvent>if not exist "$(SolutionDir)PokerEnReseau\$(OutDir)\bots" mkdir "$(SolutionDir)PokerEnReseau\$(OutDir)\bots"</PreBuildEvent>
@@ -42,15 +41,11 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
   </PropertyGroup>
-  <!--<PropertyGroup>
-    <PreBuildEvent>if not exist "$(SolutionDir)PokerEnReseau\$(OutDir)\bots" mkdir "$(SolutionDir)PokerEnReseau\$(OutDir)\bots"</PreBuildEvent>
-    <PostBuildEvent>copy /Y "$(TargetDir)\$(TargetName).*" "$(SolutionDir)PokerEnReseau\$(OutDir)\bots\"</PostBuildEvent>
-  </PropertyGroup>-->
   <ItemGroup>
     <ProjectReference Include="..\Poker.Interface\Poker.Interface.csproj" />
   </ItemGroup>

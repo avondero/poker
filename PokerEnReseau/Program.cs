@@ -58,7 +58,7 @@ namespace PokerEnReseau
                         infos = new InfosEcranConnexion(formDemarrage.NomJoueur, formDemarrage.AdresseServeur, formDemarrage.Langue, formDemarrage.EstServeur, formDemarrage.EstSpectateur, infos.ListeServeurs);                        
                         infos.ModeLancementClient = formDemarrage.EstClientEnModeLecture ? ModeClient.LecturePartie : ModeClient.Jeu;
                         infos.EstSpectateur = formDemarrage.EstSpectateur;
-                        if (infos.ListeServeurs == null) infos.ListeServeurs = new List<String>();
+                        if (infos.ListeServeurs == null) infos.ListeServeurs = new List<string>();
                         if (infos.ListeServeurs.Contains(infos.AdresseServeur))
                         {
                             // Une seule instance de l'adresse déjà choisie
@@ -196,7 +196,7 @@ namespace PokerEnReseau
             try
             {
                 commServeur = new CommunicationServeur();            
-                serveur = DuplexChannelFactory<IServeur>.CreateChannel(new InstanceContext(commServeur), new NetTcpBinding(SecurityMode.None), new EndpointAddress(adresseServeur));           
+                serveur = new DuplexChannelFactory<IServeur>(new InstanceContext(commServeur), adresseServeur).CreateChannel();
                 res = serveur.Connecter(joueurConnecte);
             }
             catch (Exception ex)

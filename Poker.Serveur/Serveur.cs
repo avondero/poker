@@ -24,7 +24,6 @@ namespace Poker.Serveur
     /// Classe d'hébergement du serveur
    ///  
     /// </summary>
-    [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple)]
     public class Serveur : IServeur
     {
         #region Membres privés
@@ -114,7 +113,7 @@ namespace Poker.Serveur
         /// <param name="expediteur">Le demandeur</param>
         public ResultatConnection Connecter(Joueur expediteur)
         {
-            return VerificationConditionsConnections(expediteur, OperationContext.Current.GetCallbackChannel<ICallBack>());
+            return this.VerificationConditionsConnections(expediteur, OperationContext.Current.GetCallbackChannel<ICallBack>());
         }
 
         /// <summary>
@@ -1101,7 +1100,7 @@ namespace Poker.Serveur
 
         public static bool DemarrerServeur(string adresse)
         {
-            ServiceHost host = new ServiceHost(typeof(Serveur));
+            /*ServiceHost host = new ServiceHost(typeof(Serveur));
             host.AddServiceEndpoint(typeof(Poker.Interface.Communication.IServeur), new NetTcpBinding(SecurityMode.None), adresse);
             // Démarrage du serveur 
             bool serveurDemarre = false;
@@ -1116,7 +1115,8 @@ namespace Poker.Serveur
                 serveurDemarre = false;
                 logServeur.Debug("Erreur lors du démarrage du serveur : " + ex.Message);
             }
-            return serveurDemarre;
+            return serveurDemarre;*/
+            return false;
         }
 
         /// <summary>

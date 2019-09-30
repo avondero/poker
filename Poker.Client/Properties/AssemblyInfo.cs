@@ -1,25 +1,10 @@
-#region Using directives
+ï»¿#region Usings
 
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Resources;
-using System.Globalization;
-using System.Windows;
 using System.Runtime.InteropServices;
+using System.Windows;
 
 #endregion
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-[assembly: AssemblyTitle("Poker.Client")]
-[assembly: AssemblyDescription("Jeu de poker en réseau")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Pat & Pico")]
-[assembly: AssemblyProduct("PokerEnReseau")]
-[assembly: AssemblyCopyright("Copyright @  2007")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 
 //In order to begin building localizable applications, set 
@@ -48,15 +33,3 @@ using System.Runtime.InteropServices;
     // Specifies the location of the system non-theme specific resource dictionary:
     //     Themes\generic.xaml
     ResourceDictionaryLocation.SourceAssembly)]
-
-
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-[assembly: AssemblyVersion("4.3.*")]

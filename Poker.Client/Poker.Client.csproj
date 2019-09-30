@@ -1,30 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CF0C4176-D2A4-4B08-919A-44B255D6756A}</ProjectGuid>
-    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <RootNamespace>Poker.Client</RootNamespace>
-    <AssemblyName>Poker.Client</AssemblyName>
-    <WarningLevel>4</WarningLevel>
-    <OutputType>Library</OutputType>
-    <MinFrameworkVersionRequired>3.0</MinFrameworkVersionRequired>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <StartupObject>
-    </StartupObject>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <FileUpgradeFlags />
+    <UpgradeBackupLocation />
     <ApplicationIcon>Images\PokerEnReseau.ico</ApplicationIcon>
-    <TargetFrameworkProfile />
     <PublishUrl>Publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -39,187 +19,35 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <AssemblyTitle>Poker.Client</AssemblyTitle>
+    <Company>Pat &amp; Pico</Company>
+    <Product>PokerEnReseau</Product>
+    <Description>Jeu de poker en r�seau</Description>
+    <Copyright>Copyright @  2007</Copyright>
+    <Deterministic>false</Deterministic>
+    <AssemblyVersion>4.3.*</AssemblyVersion>
+    <FileVersion>4.3.*</FileVersion>
+    <OutputPath>.\bin\$(Configuration)\</OutputPath>
+    <UseWPF>true</UseWPF>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>.\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
-    <Optimize>true</Optimize>
-    <OutputPath>.\bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
     <DebugType>pdbonly</DebugType>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <Import Project="SubsetFont.targets" />
   <ItemGroup>
-    <Reference Include="mscorlib" />
-    <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase">
-      <RequiredTargetFramework>3.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="PresentationCore">
-      <RequiredTargetFramework>3.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="PresentationFramework">
-      <RequiredTargetFramework>3.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="UIAutomationProvider">
-      <RequiredTargetFramework>3.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="UIAutomationTypes" />
-    <Reference Include="ReachFramework" />
-    <Reference Include="System.Printing" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.IdentityModel" />
-    <BlendEmbeddedFont Include="Fonts\verdana.ttf">
-      <IsSystemFont>True</IsSystemFont>
-    </BlendEmbeddedFont>
-    <BlendEmbeddedFont Include="Fonts\verdanab.ttf">
-      <IsSystemFont>True</IsSystemFont>
-    </BlendEmbeddedFont>
-    <BlendEmbeddedFont Include="Fonts\verdanai.ttf">
-      <IsSystemFont>True</IsSystemFont>
-    </BlendEmbeddedFont>
-    <BlendEmbeddedFont Include="Fonts\verdanaz.ttf">
-      <IsSystemFont>True</IsSystemFont>
-    </BlendEmbeddedFont>
-    <Resource Include="Images\PokerEnReseau.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="AffichageCartes\JetonDealer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="AffichageCartes\JetonGrosseBlind.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="AffichageCartes\JetonPetiteBlind.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="AffichageCartes\JoueurControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="SelectionParties.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Styles\DicoResources.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Styles\DictionnaireCartes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Styles\DictionnaireFontes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="TablePoker.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="TablePoker.xaml.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>TablePoker.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AffichageCartes\JetonDealer.xaml.cs">
-      <DependentUpon>JetonDealer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="AffichageCartes\JetonGrosseBlind.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="AffichageCartes\JetonPetiteBlind.xaml.cs">
-      <DependentUpon>JetonPetiteBlind.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CommunicationServeur.cs" />
-    <Compile Include="ConstantesClient.cs" />
-    <Compile Include="Delegates.cs" />
-    <Compile Include="Enums.cs" />
-    <Compile Include="AffichageCartes\GestionCartes.cs" />
-    <Compile Include="AffichageCartes\JoueurControl.xaml.cs">
-      <DependentUpon>JoueurControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ExtensionJoueur.cs" />
-    <Compile Include="GestionFenetre.cs" />
-    <Compile Include="GestionReplay.cs" />
-    <Compile Include="logClient.cs" />
-    <Compile Include="PokerPanel.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="app.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="SelectionParties.xaml.cs">
-      <DependentUpon>SelectionParties.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Settings.cs" />
-    <Compile Include="Traducteur.cs" />
-    <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Poker.Interface.ExtensionsClient\Poker.Interface.ExtensionsClient.csproj">
-      <Project>{B613AB1E-D05F-47BB-AF67-542894328D33}</Project>
-      <Name>Poker.Interface.ExtensionsClient</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Poker.Interface\Poker.Interface.csproj">
-      <Project>{D609A6D1-1AEA-429F-AA82-84E4EE6FB6B8}</Project>
-      <Name>Poker.Interface</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\Poker.Interface.ExtensionsClient\Poker.Interface.ExtensionsClient.csproj" />
+    <ProjectReference Include="..\Poker.Interface\Poker.Interface.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Cartes.jpg">
@@ -227,37 +55,14 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 3.1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.0.0" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="SubsetFont.targets" />
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,183 @@
+syntax = "proto3";
+
+
+option csharp_namespace = "Poker.Serveur.Protos";
+
+
+package Poker.Serveur;
+
+service Serveur {
+	rpc EnvoyerMessagePublic(.Poker.Serveur.MessagePublic) returns (.Poker.Serveur.UUID);
+	rpc Connecter(Joueur) returns (ResultatConnection);
+	rpc Deconnecter(.Poker.Serveur.UUID) returns (.Poker.Serveur.UUID);
+	rpc EnvoyerRegard(.Poker.Serveur.Regard) returns (.Poker.Serveur.UUID);
+	rpc EnvoyerAction(.Poker.Serveur.Action) returns (.Poker.Serveur.UUID);
+	rpc ChangerOptions(.Poker.Serveur.MessageOptions) returns (.Poker.Serveur.UUID);
+	rpc DemarrerPartie(.Poker.Serveur.MessageOptions) returns (.Poker.Serveur.UUID);
+	rpc AjouterBot(.Poker.Serveur.MessageOptions) returns (.Poker.Serveur.UUID);
+	rpc RecupererInformationsAdministrations(.Poker.Serveur.UUID) returns (.Poker.Serveur.InfosAdmin);
+}
+
+message InfosAdmin {
+	message CalculAugmentationBlinds {
+		string LibelleMethode = 1;
+		string LibelleParametre = 2;
+	}
+
+	message DescriptionBot {
+		string Description = 1;
+		string TypeBot = 2;
+	}
+
+	CalculAugmentationBlinds MethodeCalculAugmentationBlind = 1;
+	Options OptionsParDefaut = 2;
+	repeated DescriptionBot ListeBots = 3;
+}
+
+message MessageBot {
+	.Poker.Serveur.UUID Guid = 1;
+	string typeBot = 2;
+	string nom = 3;
+}
+
+message MessagePublic {
+	.Poker.Serveur.ChatMessage msg = 1;
+	.Poker.Serveur.UUID Guid = 2; 
+}
+
+message MessageOptions {
+	.Poker.Serveur.UUID Guid = 1; 
+	.Poker.Serveur.Options Options = 2;
+}
+
+message ChatMessage {
+	string Contenu = 1;
+}
+
+message UUID {
+	string value = 1;
+}
+
+message ResultatConnection {
+	RetourConnection Connection = 1;
+	repeated Joueur ListeJoueurs = 2;
+	.Poker.Serveur.UUID IdentifiantConnexion = 3;
+	int32 PositionJoueur = 4;
+	bool AdminServeur = 5;
+}
+
+message Regard {
+	.Poker.Serveur.UUID Guid = 1;
+	bool debutRegard = 2;
+}
+
+message Action {
+	.Poker.Serveur.UUID Guid = 1;
+	.Poker.Serveur.ActionJoueur action = 2;
+}
+
+message ActionJoueur {
+	TypeActionJoueur TypeAction = 1;
+	int32 Montant = 2;
+}
+
+message Options {
+	int32 ParametreAugmentationBlinds = 1;
+	int32 TimeOutFinDonneCartesCachees = 2;
+	int32 TimeOutFinDonneCartesMontrees = 3;
+	int32 TimeOutAction = 4;
+	int32 MontantPetiteBlindInitial = 5;
+	int32 TapisInitial = 6;
+}
+
+message Joueur {
+	.Poker.Serveur.TypeActionJoueur DerniereAction = 1;
+	string Nom = 2;
+	int32 TapisJoueur = 3;
+	.Poker.Serveur.CartePoker Carte1 = 4;
+	.Poker.Serveur.CartePoker Carte2 = 5;
+	bool EstConnecte = 6;
+	.Poker.Serveur.TypeBouton Bouton = 7;
+	bool AdministrateurServeur = 8;
+	.Poker.Serveur.UUID Identifiant = 9;
+	bool Elimine = 10;
+	bool TourDeJeu = 11;
+	bool Bot = 12;
+	bool EstSpectateur = 13;
+	bool JeterCartes = 14;
+	int32 Mise = 15;
+	int32 MiseTotale = 16;
+	int32 PositionElimination = 17;
+}
+
+message CartePoker {
+	.Poker.Serveur.HauteurCarte Hauteur = 1;
+	.Poker.Serveur.CouleurCarte Couleur = 2;
+}
+
+enum RetourConnection
+{
+	Ok = 0;
+	TropDeJoueurs = 1;
+	NomDejaUtilise = 2;
+	NomIncorrect = 3;
+	PartieEnCours = 4;
+}
+
+enum TypeActionJoueur
+{ 
+	/// <summary>
+	/// Aucune action du joueur : permet de montrer qu'il n'a rien fait
+	/// </summary>
+	Aucune = 0;
+	Passe = 1;
+	Suit = 2;
+	Parole = 3;
+	/// <summary>
+	/// Mise = aucun joueur n'a parlé
+	/// </summary>
+	Mise = 4;
+	/// <summary>
+	/// Relance = 1 joueur à déjà parlé
+	/// </summary>
+	Relance = 5;
+	Tapis = 6;
+	PetiteBlind = 7;
+	GrosseBlin = 8;
+}
+
+enum CouleurCarte
+{
+	AucuneCouleur = 0;
+	Trefle = 1;
+	Carreau = 2;
+	Coeur = 3;
+	Pique = 4;
+}
+
+enum HauteurCarte
+{
+	Null = 0;
+	Un = 1;
+	Deux = 2;
+	Trois = 3;
+	Quatre = 4;
+	Cinq = 5;
+	Six = 6;
+	Sept = 7;
+	Huit = 8;
+	Neuf = 9;
+	Dix = 10;
+	Valet = 11;
+	Dame = 12;
+	Roi = 13;
+	As = 14;
+}
+
+enum TypeBouton
+{
+	BtnAucun = 0;
+	BtnDealer = 1;
+	BtnPetiteBlind = 2;
+	BtnGrosseBlind = 4;
+}
