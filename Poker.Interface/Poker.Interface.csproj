@@ -16,7 +16,6 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <AssemblyTitle>Poker.Interface</AssemblyTitle>
@@ -25,8 +24,10 @@
     <Description>Jeu de poker en réseau</Description>
     <Copyright>Copyright @  2007</Copyright>
     <Deterministic>false</Deterministic>
-    <AssemblyVersion>4.3.*</AssemblyVersion>
-    <FileVersion>4.3.0.0</FileVersion>
+    <ApplicationVersion>5.0.0.0</ApplicationVersion>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <FileVersion>5.0.0.0</FileVersion>
+    <Version>5.0.0.0</Version>
     <OutputPath>bin\netstandard2.1\$(Configuration)\</OutputPath>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>

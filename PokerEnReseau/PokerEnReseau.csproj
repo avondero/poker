@@ -33,7 +33,6 @@
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>4.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <AssemblyTitle>PokerEnReseau</AssemblyTitle>
@@ -42,8 +41,10 @@
     <Description>Jeu de poker en r�seau</Description>
     <Copyright>Copyright @  2007</Copyright>
     <Deterministic>false</Deterministic>
-    <AssemblyVersion>4.3.*</AssemblyVersion>
-    <FileVersion>4.3.*</FileVersion>
+    <ApplicationVersion>5.0.0.0</ApplicationVersion>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <FileVersion>5.0.0.0</FileVersion>
+    <Version>5.0.0.0</Version>
     <OutputPath>.\bin\$(Configuration)\</OutputPath>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
